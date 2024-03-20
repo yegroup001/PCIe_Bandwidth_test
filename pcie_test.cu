@@ -27,7 +27,7 @@ int main() {
 
     // 分配设备内存
     char *d_data;
-    cudaMalloc((void **)&d_data, dataSize);
+    cudaMallocPitch((void **)&d_data, dataSize);
 
     // 填充主机内存
     #pragma omp parallel for
